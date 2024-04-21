@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        header a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .perfume-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .perfume-item img {
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" id="homeBtn">Home</a>
+        <a href="#" id="productBtn">Product</a>
+    </header>
+
+    <div class="container">
+        <section id="home">
+            <h1>Welcome to Perfume Company</h1>
+            <p>Discover our range of perfumes designed for different genders and seasons.</p>
+        </section>
+
+        <section id="product" style="display: none;">
+            <div class="perfume-item">
+                <img src="placeholder_male.jpg" alt="Male Perfume">
+                <div>
+                    <h2>For Men</h2>
+                    <p>Description of male perfume...</p>
+                    <p>Attraction color: Blue</p>
+                </div>
+            </div>
+            <div class="perfume-item">
+                <img src="placeholder_female.jpg" alt="Female Perfume">
+                <div>
+                    <h2>For Women</h2>
+                    <p>Description of female perfume...</p>
+                    <p>Attraction color: Pink</p>
+                </div>
+            </div>
+            <div class="perfume-item">
+                <img src="placeholder_unisex.jpg" alt="Unisex Perfume">
+                <div>
+                    <h2>Unisex</h2>
+                    <p>Description of unisex perfume...</p>
+                    <p>Attraction color: Green</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="display: none;">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Perfume Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            document.getElementById('home').style.display = 'block';
+            document.getElementById('product').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+        });
+
+        document.getElementById('productBtn').addEventListener('click', function() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('product').style.display = 'block';
+            document.getElementById('contact').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
